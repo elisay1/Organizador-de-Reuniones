@@ -12,10 +12,10 @@
 
 Instrucciones detalladas sobre cómo crear un proyecto en Laravel 11 utilizando FilamentPHP para desarrollar un Organizador de Reuniones.
 
-## Paso 1: Crear el Proyecto Laravel
+## Paso 1: Instalar Laravel
 
 ```bash
-composer create-project --prefer-dist laravel/laravel .
+composer create-project laravel/laravel .
 ```
 # Nota
 - El punto "." indica que ya has creado tu carpeta y solo necesitas instalar Laravel.
