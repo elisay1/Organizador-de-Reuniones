@@ -7,60 +7,72 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Ayuda
+# Organizador de Reuniones con FilamentPHP en Laravel 11
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Instrucciones detalladas sobre cómo crear un proyecto en Laravel 11 utilizando FilamentPHP para desarrollar un Organizador de Reuniones.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Paso 1: Crear el Proyecto Laravel
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+composer create-project --prefer-dist laravel/laravel .
+```
+# Nota
+- El punto "." indica que ya has creado tu carpeta y solo necesitas instalar Laravel.
 
-## Learning Laravel
+## Paso 2: Instalar Livewire
+```bash
+composer require livewire/livewire
+```
+## Paso 3: Instalar Filament
+```bash
+composer require filament/filament
+```
+## Paso 4: Instalar Paneles de Filament
+```bash
+php artisan filament:install --panels
+```
+## Paso 5: Crear Usuario Filament
+```bash
+php artisan make:filament-user
+```
+# Nota: 
+- Se crea el nombre, correo y contraseña del usuario.
+## Paso 6: Crear Modelos
+```bash
+php artisan make:model Nombre -m
+```
+-El flag "-m" crea las tablas de migraciones.
+## Paso 7: Crear Controladores y Vistas
+```bash
+php artisan make:filament-resource Nombre --view
+```
+- El flag --view se usa para que se cree la vista.
+## Paso 8: Agregar una Tabla en Migraciones
+```bash
+php artisan make:migration add_fields_to_nombre_table
+```
+## Paso 9: Crear Tabla de Usuarios
+```bash
+php artisan make:filament-resource User --generate
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Nota General
+- Debes tener habilitada la extensión zip de XAMPP (extension=zip) y intl (extension=intl).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Redes Sociales
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- YouTube: [DevCode_256](https://www.youtube.com/@DevCode_256)
+- Instagram: [@eli.sayes](https://www.instagram.com/eli.sayes/)
+- GitHub: [elisay1](https://github.com/elisay1)
+- TikTok: [@elisaycode](https://www.tiktok.com/@elisaycode)
 
-## Laravel Sponsors
+## Contacto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+¡Si estás interesado en colaborar en proyectos o simplemente quieres ponerte en contacto conmigo, no dudes en hacerlo!
 
-### Premium Partners
+- WhatsApp: +51 921-674-886
+## Licencia
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Este proyecto es de código abierto bajo la [Licencia MIT](https://opensource.org/licenses/MIT).
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
