@@ -61,7 +61,7 @@ php artisan make:filament-resource User --generate
 - Debes tener habilitada la extensión zip de XAMPP (extension=zip) y intl (extension=intl).
 
 ## Redes Sociales
-
+- Apóyame siguiéndome
 - YouTube: [DevCode_256](https://www.youtube.com/@DevCode_256)
 - Instagram: [@eli.sayes](https://www.instagram.com/eli.sayes/)
 - GitHub: [elisay1](https://github.com/elisay1)
